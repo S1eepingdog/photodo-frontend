@@ -20,7 +20,7 @@ module.exports = function (grunt) {
                 expand: true,
                 cwd: 'src/css',
                 src: ['index.css'],
-                dest: 'build/static/css'
+                dest: 'build/css'
             }
         },
         htmlmin: {
