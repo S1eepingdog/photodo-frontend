@@ -8,9 +8,6 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
-  test:
-    commands:
-      - echo See debug file
       - cat /root/.npm/_logs/*.log
 artifacts:
   files:
