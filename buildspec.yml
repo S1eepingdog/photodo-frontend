@@ -9,6 +9,9 @@ phases:
       - echo Build started on `date`
       - npm run build
       - cat /root/.npm/_logs/*.log
+  post_build:
+    commands:
+      - cat /root/.npm/_logs/*.log
 artifacts:
   files:
     - '**/*'
