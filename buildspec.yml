@@ -9,3 +9,7 @@ phases:
     commands:
       - echo Build started on `date`
       - grunt
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
