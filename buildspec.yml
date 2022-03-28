@@ -1,18 +1,32 @@
-version: 0.1
+#version: 0.1
+#phases:
+#  pre_build:
+#    commands:
+#      - echo Installing source NPM dependencies...
+#      - npm install
+#  build:
+#    commands:
+#      - echo Build started on `date`
+#      - npm run build
+#      - cat /root/.npm/_logs/*.log
+#  post_build:
+#    commands:
+#      - cat /root/.npm/_logs/*.log
+#artifacts:
+#  files:
+#    - '**/*'
+#  base-directory: build
+version: 0.2
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      nodejs: 10
     commands:
-      - echo Installing source NPM dependencies...
       - npm install
   build:
     commands:
       - echo Build started on `date`
       - npm run build
-      - cat /root/.npm/_logs/*.log
   post_build:
     commands:
       - cat /root/.npm/_logs/*.log
-artifacts:
-  files:
-    - '**/*'
-  base-directory: build
