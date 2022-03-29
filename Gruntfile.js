@@ -7,7 +7,12 @@ module.exports = function (grunt) {
                 banner: '/*! <%= pkg.file %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'src/js/index.js',
+                src: ['src/js/index.js','/lib/axios/dist/axios.standalone.js','/lib/CryptoJS/rollups/hmac-sha256.js',
+                    '/lib/CryptoJS/rollups/sha256.js','/lib/CryptoJS/components/hmac.js',
+                    '/lib/CryptoJS/components/enc-base64.js','/lib/url-template/url-template.js',
+                    '/lib/apiGatewayCore/sigV4Client.js','/lib/apiGatewayCore/apiGatewayClient.js',
+                    '/lib/apiGatewayCore/simpleHttpClient.js', '/lib/apiGatewayCore/utils.js', 'src/js/apigClient.js',
+                    'src/js/api.mjs', 'src/js/transcribe.mjs'],
                 dest: 'build/js/<%=pkg.name%>-<%=pkg.version%>.min.js'
             }
         },
