@@ -38,7 +38,7 @@ function uploadPhoto(file, labels) {
     // Use S3 ManagedUpload class as it supports multipart uploads
     var upload = new AWS.S3.ManagedUpload({
         params: {
-            Bucket: "hw2-b2-photo-storage",
+            Bucket: "hw2-photos-b2",
             Key: fileName,
             Body: file,
             Metadata: {
