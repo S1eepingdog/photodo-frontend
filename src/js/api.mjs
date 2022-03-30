@@ -23,7 +23,7 @@ function search(keyword, callback) {
 }
 
 var bucketRegion = "us-east-1"
-var IdentityPoolId = "us-east-1:c379ade2-17ce-47f9-8aa0-ad342c758a37"
+var IdentityPoolId = "us-east-1:877a4301-7782-45e1-9aea-474cd05cb07a"
 
 AWS.config.update({
     region: bucketRegion,
