@@ -57,8 +57,9 @@ $(function () {
 
     span.on('click', function() {
         modal.style.display = "none";
-        // preview.src = './imgs/white.png';
-        preview.removeAttribute("src")
+        preview.src = './imgs/white.png';
+        // preview.removeAttribute("src")
+        customLabel.value = ""
         uploadFile.val("");
     })
 
@@ -67,12 +68,15 @@ $(function () {
         if (submitFile != null) {
             let labels = $("#custom-label");
             if (labels != null) {
-                label = labels.val().split(" ");
+                label = labels.val().split(",");
             }
             console.log(label.join(','));
             uploadPhoto(submitFile, label.join(','));
-            preview.removeAttribute("src")
+            preview.src = './imgs/white.png';
+            // preview.removeAttribute("src")
             uploadFile.val("");
+            customLabel.value = ""
+            modal.style.display = "none";
         }
     })
 
